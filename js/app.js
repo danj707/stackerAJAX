@@ -79,7 +79,7 @@ var getUnanswered = function (tags) {
     };
 
     $.ajax({
-            url: "http://api.stackexchange.com/2.2/questions/unanswered",
+            url: "https://api.stackexchange.com/2.2/questions/unanswered",
             data: request,
             dataType: "jsonp", //use jsonp to avoid cross origin issues
             type: "GET",
@@ -112,7 +112,7 @@ var getTopAnswerers = function (top) {
     };
 
     $.ajax({
-            url: "http://api.stackexchange.com/2.2/tags/" + top + "/top-answerers/all_time",
+            url: "https://api.stackexchange.com/2.2/tags/" + top + "/top-answerers/all_time",
             data: request,
             dataType: "jsonp", //use jsonp to avoid cross origin issues
             type: "GET",
@@ -136,7 +136,7 @@ var getTopAnswerers = function (top) {
 
 $(document).ready(function () {
     $('.unanswered-getter').submit(function (e) {
-        //e.preventDefault();
+        e.preventDefault();
         // zero out results if previous search has run
         $('.results').html('');
         // get the value of the tags the user submitted
@@ -145,7 +145,7 @@ $(document).ready(function () {
     });
 
     $('.inspiration-getter').submit(function (event) {
-        //event.preventDefault();
+        event.preventDefault();
         // zero out results if previous search has run
         $('.results').html('');
         // get the value of the tags the user submitted
