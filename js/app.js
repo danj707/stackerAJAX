@@ -136,7 +136,7 @@ var getTopAnswerers = function (top) {
 
 $(document).ready(function () {
     $('.unanswered-getter').submit(function (e) {
-        e.preventDefault();
+        //e.preventDefault();
         // zero out results if previous search has run
         $('.results').html('');
         // get the value of the tags the user submitted
@@ -145,7 +145,7 @@ $(document).ready(function () {
     });
 
     $('.inspiration-getter').submit(function (event) {
-        event.preventDefault();
+        //event.preventDefault();
         // zero out results if previous search has run
         $('.results').html('');
         // get the value of the tags the user submitted
